@@ -1,14 +1,17 @@
 <template>
+  <Header />
   <UserProfile />
 </template>
 
 <script>
 import UserProfile from "./components/UserProfile";
+import Header from "./components/Header";
 
 export default {
   name: "App",
   components: {
     UserProfile,
+    Header,
   },
 };
 </script>
@@ -17,7 +20,7 @@ export default {
 @import "./styles/reset.css";
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

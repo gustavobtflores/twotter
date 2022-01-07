@@ -1,19 +1,12 @@
 <template>
   <header class="user-profile__header">
     <h1 class="user-profile__header-title">Twooter</h1>
-    <span class="user-profile__header-username">@{{ username }}</span>
   </header>
 </template>
 
 <script>
 export default {
   name: "Header",
-  props: {
-    username: {
-      type: String,
-      required: true,
-    },
-  },
 };
 </script>
 

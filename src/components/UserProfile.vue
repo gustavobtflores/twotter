@@ -1,9 +1,8 @@
 <template>
-  <Header :username="user.username" />
   <div class="user-profile">
     <div class="user-profile__user-panel">
       <div class="user-profile__user-panel-wrapper">
-        <h1 class="user-profile__username">{{ user.username }}</h1>
+        <h1 class="user-profile__username">@{{ user.username }}</h1>
         <div class="user-profile__user-infos">
           <div class="user-profile__follower-count">
             Followers: {{ this.followers }}
@@ -30,11 +29,10 @@
 <script>
 import TwootItem from "./TwootItem";
 import NewTwootForm from "./NewTwootForm";
-import Header from "./Header";
 
 export default {
   name: "UserProfile",
-  components: { TwootItem, NewTwootForm, Header },
+  components: { TwootItem, NewTwootForm },
   data() {
     return {
       followers: 0,
@@ -79,11 +77,20 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  margin: 0;
+}
+
 .user-profile {
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 100%;
   padding: 50px 5%;
+}
+
+.user-profile__username {
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .user-profile__user-panel {
@@ -96,20 +103,23 @@ export default {
 .user-profile__user-panel-wrapper {
   border: 1px solid #dddddd;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .user-profile__user-infos {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 4px;
+  margin-top: 8px;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .user-profile__admin-badge {
-  border: 2px solid orange;
   border-radius: 8px;
-  padding: 0 8px;
-  background-color: #fed8b1;
+  padding: 4px 8px;
+  background-color: #9f33ff;
+  color: #ffffff;
 }
 
 .user-profile__twoots-wrapper {
@@ -118,9 +128,5 @@ export default {
   width: 90%;
   gap: 16px;
   justify-content: flex-end;
-}
-
-h1 {
-  margin: 0;
 }
 </style>

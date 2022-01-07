@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/scss/variables';
+@use "../styles/scss/variables";
 
 .user-profile__ {
   &header {
@@ -28,7 +28,7 @@ export default {
     padding: 16px 5%;
     background-color: variables.$color-primary;
 
-    &-title{
+    &-title {
       font-size: 32px;
       color: variables.$color-texts;
     }

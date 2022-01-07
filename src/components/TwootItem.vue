@@ -42,7 +42,7 @@ export default {
 }
 
 .user-profile__twoot:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .user-profile__twoot-user {

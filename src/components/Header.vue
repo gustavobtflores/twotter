@@ -1,6 +1,8 @@
 <template>
   <header class="user-profile__header">
-    <h1 class="user-profile__header-title">Twooter</h1>
+    <router-link to="/">
+      <h1 class="user-profile__header-title">Twooter</h1>
+    </router-link>
   </header>
 </template>
 

@@ -27,30 +27,21 @@
 </template>
 
 <script>
-import TwootItem from "./TwootItem";
-import NewTwootForm from "./NewTwootForm";
+import TwootItem from "@/components/TwootItem";
+import NewTwootForm from "@/components/NewTwootForm";
+import { useRoute } from "vue-router";
+import { users } from "@/assets/users.js";
 
 export default {
   name: "UserProfile",
   components: { TwootItem, NewTwootForm },
   data() {
+    const route = useRoute();
+    const userId = route.params.userId;
+
     return {
       followers: 0,
-      user: {
-        id: 1,
-        username: "gustavobtflores",
-        firstName: "Gustavo",
-        lastName: "Flores",
-        email: "example@example.com",
-        isAdmin: true,
-        twoots: [
-          { id: 1, content: "Twoot is amazing, loving it!" },
-          {
-            id: 2,
-            content: "Look how the sky is beatiful today!",
-          },
-        ],
-      },
+      user: users[userId - 1],
     };
   },
   mounted() {},

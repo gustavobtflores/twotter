@@ -1,16 +1,14 @@
 <template>
   <Header />
-  <UserProfile />
+  <router-view />
 </template>
 
 <script>
-import UserProfile from "./components/UserProfile";
-import Header from "./components/Header";
+import Header from "@/components/Header";
 
 export default {
   name: "App",
   components: {
-    UserProfile,
     Header,
   },
 };
@@ -25,5 +23,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
